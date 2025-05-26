@@ -1,0 +1,42 @@
+.card {
+    position: relative;
+    height: 300px;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: conic-gradient(
+      from 0deg at center,
+      #00c3ff,
+      #4d0199,
+      #6300c6,
+      #009dcd
+    );
+    border-radius: inherit;
+    z-index: -2;
+  }
+  
+  .card::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #142d4a;
+    border-radius: inherit;
+    z-index: -1;
+  }
+  
+  .content {
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
